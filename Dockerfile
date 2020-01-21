@@ -1,12 +1,12 @@
 FROM arm64v8/ubuntu:20.04
 
 # Install (for SANE Backend).
-RUN apt update
+RUN apt-get update
 
-RUN apt install -y libusb-1.0-0-dev build-essential libsane-dev \
-	&& apt install -y libavahi-client-dev libavahi-glib-dev \
-	&& apt install -y git-core \
-	&& apt install -y autoconf libtool \
+RUN apt-get install -y libusb-1.0-0-dev build-essential libsane-dev \
+	&& apt-get install -y libavahi-client-dev libavahi-glib-dev \
+	&& apt-get install -y git-core \
+	&& apt-get install -y autoconf libtool \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Compile SANE Backend.
